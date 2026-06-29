@@ -1,0 +1,5 @@
+environments:
+  - name: ci
+    type: custom
+    variables:
+      base-URL: https://example.com
