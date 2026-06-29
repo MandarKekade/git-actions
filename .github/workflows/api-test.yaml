@@ -24,8 +24,9 @@ jobs:
       - name: Run Bruno collection
         run: |
           mkdir -p reports
-          bru run \
+          bru run collection \
             --workspace-path . \
+            --env-file collection/environments/CI.json \
             --env-var platform_name="GitHub Actions" \
             --env-var build_id="${{ github.run_id }}" \
             --env-var commit_sha="${{ github.sha }}" \

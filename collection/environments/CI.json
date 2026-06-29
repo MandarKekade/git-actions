@@ -1,0 +1,9 @@
+{
+  "name": "CI",
+  "variables": [
+    {
+      "name": "base-url",
+      "value": "https://httpbin.org/get"
+    }
+  ]
+}
