@@ -1,0 +1,4 @@
+name: CI
+variables:
+  - name: base-URL
+    value: https://echo.usebruno.com

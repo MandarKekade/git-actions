@@ -1,0 +1,21 @@
+info:
+  name: echo bruno
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base-URL}}"
+  body:
+    type: json
+    data: |-
+      {
+        name = 'bruno';
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
