@@ -20,16 +20,16 @@ jobs:
 
       - uses: usebruno/bruno-cli-action@v1
         with:
-          working-directory: collections/bruno-automation-demo
+          working-directory: .
           command: >
             run
             --global-env ci
-            --workspace-path ../..
+            --workspace-path .
             --tags smoke,workflow,release-gate
             --env-var platform_name="GitHub Actions"
             --env-var build_id="${{ github.run_id }}"
             --env-var commit_sha="${{ github.sha }}"
-            --reporter-html ../../reports/github-actions-report.html
+            --reporter-html reports/github-actions-report.html
 
       - uses: actions/upload-artifact@v6
         if: ${{ !cancelled() }}
